@@ -13,10 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.3'  # Updated to match required Dart SDK version
+          flutter-version: '3.24.3'
           channel: 'stable'
           cache: true
 
@@ -55,10 +62,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.3'  # Updated to match required Dart SDK version
+          flutter-version: '3.24.3'
           channel: 'stable'
           cache: true
 
@@ -83,7 +97,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.3'  # Updated to match required Dart SDK version
+          flutter-version: '3.24.3'
           channel: 'stable'
           cache: true
 
