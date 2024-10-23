@@ -16,7 +16,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.3'  # Specify exact version instead of 3.x.x
+          flutter-version: '3.24.3'  # Updated to match required Dart SDK version
           channel: 'stable'
           cache: true
 
@@ -58,7 +58,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.3'  # Match version across all jobs
+          flutter-version: '3.24.3'  # Updated to match required Dart SDK version
           channel: 'stable'
           cache: true
 
@@ -68,7 +68,6 @@ jobs:
       - name: Build iOS
         run: flutter build ios --release --no-codesign
 
-      # Optional: Upload iOS build artifacts
       - name: Upload iOS Build
         uses: actions/upload-artifact@v3
         with:
@@ -84,7 +83,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.3'  # Match version across all jobs
+          flutter-version: '3.24.3'  # Updated to match required Dart SDK version
           channel: 'stable'
           cache: true
 
